@@ -1,6 +1,6 @@
 //checks if two arrays are equal
 //Function Implementation
-const eqArrays = (actual, expected) => {
+const assertArraysEqual = (actual, expected) => {
   // Compare lengths
   if (actual.length !== expected.length) {
     console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
@@ -10,7 +10,6 @@ const eqArrays = (actual, expected) => {
   // Iterate through each index of the array
   
   for (let index in actual) {
-    console.log(actual[index], expected[index]);
     // Compare the indices in arrrays
     if (actual[index] !== expected[index]) {
     
@@ -22,4 +21,8 @@ const eqArrays = (actual, expected) => {
   // If all elements match, return true
   console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
 };
+
+
+//Test
+assertArraysEqual([0,1,2],["0",2,2]);
 
