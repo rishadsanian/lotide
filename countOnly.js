@@ -23,12 +23,9 @@ const countOnly = (allItems, itemsToCount) => {
   const results = {};
   // Add code to loop over all the items in the array and print them to the console.
   for (const item of allItems) {
-    console.log(item);
-    // inside the loop,
-    // increment the counter for each item:
-    //   set a property with that string key to:
-    //     the value that was already there (or zero if nothing there) with 1 added to it.
+    //Check with Items to count first
     if (itemsToCount[item]) {
+    //if match truthy then increment by 1 for each person
       if (results[item]) {
         results[item] += 1;
       } else {
