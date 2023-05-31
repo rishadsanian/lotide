@@ -45,7 +45,7 @@ For each letter, instead of returning just one number to represent its number of
  */
 
 //Implement function
-const letterPositions = function (sentence) {
+const letterPositions = function(sentence) {
   const results = {};
   // logic to update results here
 

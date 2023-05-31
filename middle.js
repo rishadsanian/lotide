@@ -47,7 +47,7 @@ For arrays with an even number of elements, an array containing the two elements
 
 //FUNCTION IMPLEMENTATION
 //side effect function check for odd or even
-const isOdd = function (number) {
+const isOdd = function(number) {
   if (number % 2 === 1) return true;
 };
 const middle = (input) => {
