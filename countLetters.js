@@ -1,5 +1,5 @@
 //Test Functions
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -18,16 +18,17 @@ Before implementing this function, we need to think about how it will report bac
 const countLetters = (sentence) => {
   const output = {};
   //remove spaces
-  //sentence = sentence.split(" ").join("");
+  // sentence = sentence.split(" ").join("");
   console.log(sentence);
   //count increment
   //loop through each letter in sentence
   for (let letter of sentence) {
     //add letter count increment as value
-    if (output[letter]) {//Checks if key already exists
-      output[letter] += 1;//adds 1 if exist
+    if (output[letter]) {
+      //Checks if key already exists
+      output[letter] += 1; //adds 1 if exist
     } else {
-      output[letter] = 1;//initializes if does not exist with value of 1
+      output[letter] = 1; //initializes if does not exist with value of 1
     }
   }
 
@@ -38,6 +39,7 @@ const countLetters = (sentence) => {
 
 //TEST CASES
 const input = "lighthouse in the house";
+
 const result1 = countLetters(input, {
   l: 1,
   i: 2,
