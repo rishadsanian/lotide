@@ -27,17 +27,15 @@ const assertArraysEqual = (actual, expected) => {
   // Compare lengths
   if (actual.length !== expected.length) {
     console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-    process.exit();
+    return;
   }
 
   // Iterate through each index of the array
-
   for (let index in actual) {
-    console.log(actual[index], expected[index]);
     // Compare the indices in arrrays
     if (actual[index] !== expected[index]) {
       console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-      process.exit();
+      return;
     }
   }
 
@@ -75,7 +73,7 @@ let list = ["some", "other", "words"];
 assertArraysEqual(without(list, ["other"]), ["some", "words"]);
 
 list = ["1","1","2"];
-assertArraysEqual(without(list, ["1"]), [2]);
+assertArraysEqual(without(list, [1]), ["2"]);//fail as expected
 
 list = ["1","1","2"];
-assertArraysEqual(without(list, [1]), ["2"]);
+assertArraysEqual(without(list, ["1"]), [2]);//fail as expected
