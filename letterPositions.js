@@ -76,7 +76,7 @@ const result1 = {
   n: [12],
 };
 
-assertArraysEqual(letterPositions(input)["h"], result1["h"]); // should pass
-assertArraysEqual(letterPositions(input)["l"], result1["l"]); //should pass
-assertArraysEqual(letterPositions(input)["u"], result1["l"]); //should fail
-assertArraysEqual(letterPositions("hello").e, [1]); //should pass
+assertArraysEqual(letterPositions(input)["h"], result1["h"]);
+assertArraysEqual(letterPositions(input)["l"], result1["l"]);
+assertArraysEqual(letterPositions(input)["u"], result1["u"]);
+assertArraysEqual(letterPositions("hello").e, [1]);

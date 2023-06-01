@@ -17,7 +17,7 @@ const countLetters = (sentence) => {
   const output = {};
   //remove spaces
   // sentence = sentence.split(" ").join("");
-  console.log(sentence);
+  //console.log(sentence);
   //count increment
   //loop through each letter in sentence
   for (let letter of sentence) {
@@ -31,7 +31,7 @@ const countLetters = (sentence) => {
   }
 
   //return output object
-  console.log(output);
+  //console.log(output);
   return output;
 };
 

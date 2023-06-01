@@ -28,3 +28,4 @@ const assertArraysEqual = (actual, expected) => {
 
 //Test
 assertArraysEqual([0, 1, 2], ["0", 2, 2]);
+assertArraysEqual([0, 1, 3], [0, 1, 3]);

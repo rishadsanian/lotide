@@ -1,16 +1,16 @@
-//Test Functions
-const assertEqual = (actual, expected) => {
-  actual === expected
-    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
-
 /* countOnly will be given an array and an object. It will return an object containing counts of everything that the input object listed.
 
 only keys which have a truthy value should be counted in the resulting object. All other strings (either set to false or not included at all in the object) should not be counted. That said, if a particular string is meant to be counted but does not exist in the input array (like "f" in the example above), it also does not have to be included in the final count.
 
 The function should report back how many instances of each string were found in the allItems array of strings
 [a,a,b,a] filter {a:true, b:false, f:true} result {a:3} */
+
+//Test Functions
+const assertEqual = (actual, expected) => {
+  actual === expected
+    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
+    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
+};
 
 //Initial Function Definition
 //all items - array of strings that we need to look through
@@ -23,7 +23,7 @@ const countOnly = (allItems, itemsToCount) => {
   for (const item of allItems) {
     //Check with Items to count first
     if (itemsToCount[item]) {
-    //if match truthy then increment by 1 for each person
+      //if match truthy then increment by 1 for each person
       if (results[item]) {
         results[item] += 1;
       } else {
