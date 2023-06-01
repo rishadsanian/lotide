@@ -45,13 +45,13 @@ For each letter, instead of returning just one number to represent its number of
  */
 
 //Implement function
-const letterPositions = function(sentence) {
+const letterPositions = function (sentence) {
   const results = {};
   // logic to update results here
 
   //remove spaces
   sentence = sentence.split(""); //.join("");
- 
+
   //count increment
   //loop through each letter in sentence
   let count = 0;
@@ -78,7 +78,7 @@ const letterPositions = function(sentence) {
 const input = "lighthouse in the house";
 console.log(letterPositions(input)); //
 
-/* const result1 = {
+const result1 = {
   l: [0],
   i: [1, 11],
   g: [2],
@@ -89,9 +89,9 @@ console.log(letterPositions(input)); //
   s: [8, 21],
   e: [9, 16, 22],
   n: [12],
-}; */
+};
 
-assertArraysEqual(letterPositions(input)["h"], [3, 5, 15, 18]);
-assertArraysEqual(letterPositions(input)["l"], [0]);
-assertArraysEqual(letterPositions(input)["u"], [7, 20]);
-assertArraysEqual(letterPositions("hello").e, [1]);
+assertArraysEqual(letterPositions(input)["h"], result1["h"]);// should pass
+assertArraysEqual(letterPositions(input)["l"], result1["l"]);//should pass
+assertArraysEqual(letterPositions(input)["u"], result1["l"]); //should fail
+assertArraysEqual(letterPositions("hello").e, [1]); //should fail

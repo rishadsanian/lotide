@@ -1,12 +1,13 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
+
+
+//TEST functions
+const assertEqual = (actual, expected) => {
+  actual === expected
+    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
+    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
+// FUNCTION IMPLEMENTATION
 //Compare Arrays
 const eqArrays = (actual, expected) => {
   // Compare lengths
@@ -15,7 +16,7 @@ const eqArrays = (actual, expected) => {
   }
 
   // Iterate through each index of the array
-  for (let index in actual) {
+  for (let index of actual) {
     // Compare the indices in arrrays
     if (actual[index] !== expected[index]) {
       return false;
@@ -28,8 +29,6 @@ const eqArrays = (actual, expected) => {
 
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp"); // false
-assertEqual(1, 1); // true
 
 console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
 console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
@@ -37,7 +36,7 @@ console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
 console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
 console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 3]), true); // => should fail
-assertEqual(eqArrays([1, 2, 3,"!"], [1, 2, 3, 5]), true); // => should fail
-assertEqual(eqArrays([0], [""]), true); // => should fail
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 3]), false);
+assertEqual(eqArrays([1, 2, 3,"!"], [1, 2, 3, 5]), false);
+assertEqual(eqArrays([0], [""]), false);
