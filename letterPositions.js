@@ -29,9 +29,8 @@ const assertArraysEqual = (actual, expected) => {
     : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-
 //Implement function
-const letterPositions = function (sentence) {
+const letterPositions = (sentence) => {
   const results = {};
   // logic to update results here
 
@@ -77,7 +76,7 @@ const result1 = {
   n: [12],
 };
 
-assertArraysEqual(letterPositions(input)["h"], result1["h"]);// should pass
-assertArraysEqual(letterPositions(input)["l"], result1["l"]);//should pass
+assertArraysEqual(letterPositions(input)["h"], result1["h"]); // should pass
+assertArraysEqual(letterPositions(input)["l"], result1["l"]); //should pass
 assertArraysEqual(letterPositions(input)["u"], result1["l"]); //should fail
 assertArraysEqual(letterPositions("hello").e, [1]); //should pass
