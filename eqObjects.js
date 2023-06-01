@@ -19,9 +19,9 @@ const eqArrays = (actual, expected) => {
     return false;
   }
   // Iterate through each index of the array
-  for (let index of actual) {
+  for (let i of actual) {
     // Compare the indices in arrrays
-    if (actual[index] !== expected[index]) {
+    if (actual[i] !== expected[i]) {
       return false;
     }
   }
