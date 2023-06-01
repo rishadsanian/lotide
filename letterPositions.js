@@ -1,25 +1,10 @@
+/* Function letterPositions  will return all the indices (zero-based positions) in the string where each character is found.
+
+For each letter, instead of returning just one number to represent its number of occurrences, multiple numbers may be needed to represent all the places in the string that it shows up.
+
+ */
+
 //TEST FUNCTIONS
-const assertArraysEqual = (actual, expected) => {
-  // Compare lengths
-  if (actual.length !== expected.length) {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-    process.exit();
-  }
-
-  // Iterate through each index of the array
-
-  for (let index in actual) {
-    // Compare the indices in arrrays
-    if (actual[index] !== expected[index]) {
-      console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-      process.exit();
-    }
-  }
-
-  // If all elements match, return true
-  console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-};
-
 const eqArrays = (actual, expected) => {
   // Compare lengths
   if (actual.length !== expected.length) {
@@ -27,7 +12,7 @@ const eqArrays = (actual, expected) => {
   }
 
   // Iterate through each index of the array
-  for (let index in actual) {
+  for (let index of actual) {
     // Compare the indices in arrrays
     if (actual[index] !== expected[index]) {
       return false;
@@ -38,11 +23,12 @@ const eqArrays = (actual, expected) => {
   return true;
 };
 
-/* We'll implement a new function letterPositions which will return all the indices (zero-based positions) in the string where each character is found.
+const assertArraysEqual = (actual, expected) => {
+  eqArrays(actual, expected)
+    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
+    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
+};
 
-For each letter, instead of returning just one number to represent its number of occurrences, multiple numbers may be needed to represent all the places in the string that it shows up.
-
- */
 
 //Implement function
 const letterPositions = function (sentence) {
@@ -94,4 +80,4 @@ const result1 = {
 assertArraysEqual(letterPositions(input)["h"], result1["h"]);// should pass
 assertArraysEqual(letterPositions(input)["l"], result1["l"]);//should pass
 assertArraysEqual(letterPositions(input)["u"], result1["l"]); //should fail
-assertArraysEqual(letterPositions("hello").e, [1]); //should fail
+assertArraysEqual(letterPositions("hello").e, [1]); //should pass

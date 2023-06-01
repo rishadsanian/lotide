@@ -1,4 +1,4 @@
-
+//Compares two arrays and returns truthy or falsy
 
 //TEST functions
 const assertEqual = (actual, expected) => {

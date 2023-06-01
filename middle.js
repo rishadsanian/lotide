@@ -1,24 +1,12 @@
+/* Implement middle which will take in an array and return the middle-most element(s) of the given array.
+
+The middle function should return an array with only the middle element(s) of the provided array. This means that the length of the returned elements could vary.
+
+For arrays with one or two elements, there is no middle. Return an empty array.
+For arrays with odd number of elements, an array containing a single middle element should be returned.
+For arrays with an even number of elements, an array containing the two elements in the middle should be returned */
+
 //Test Functions
-const assertArraysEqual = (actual, expected) => {
-  // Compare lengths
-  if (actual.length !== expected.length) {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-    return;
-  }
-
-  // Iterate through each index of the array
-  for (let index in actual) {
-    // Compare the indices in arrrays
-    if (actual[index] !== expected[index]) {
-      console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-      return;
-    }
-  }
-
-  // If all elements match, return true
-  console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-};
-
 const eqArrays = (actual, expected) => {
   // Compare lengths
   if (actual.length !== expected.length) {
@@ -26,7 +14,7 @@ const eqArrays = (actual, expected) => {
   }
 
   // Iterate through each index of the array
-  for (let index in actual) {
+  for (let index of actual) {
     // Compare the indices in arrrays
     if (actual[index] !== expected[index]) {
       return false;
@@ -37,13 +25,11 @@ const eqArrays = (actual, expected) => {
   return true;
 };
 
-/* Implement middle which will take in an array and return the middle-most element(s) of the given array.
-
-The middle function should return an array with only the middle element(s) of the provided array. This means that the length of the returned elements could vary.
-
-For arrays with one or two elements, there is no middle. Return an empty array.
-For arrays with odd number of elements, an array containing a single middle element should be returned.
-For arrays with an even number of elements, an array containing the two elements in the middle should be returned */
+const assertArraysEqual = (actual, expected) => {
+  eqArrays(actual, expected)
+    ? console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`)
+    : console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
+};
 
 //FUNCTION IMPLEMENTATION
 //side effect function check for odd or even
@@ -73,18 +59,17 @@ const middle = (input) => {
     // if condition2 true return two  middle elements as array
     output.push(input[Math.floor((input.length - 1) / 2)]),
     output.push(input[Math.floor((input.length - 1) / 2)] + 1);
-
   }
   //return output
   return output;
 };
 
 //Test Cases
-assertArraysEqual((middle([1])),[]);
-assertArraysEqual((middle([1,2])),[]);
+assertArraysEqual(middle([1]), []);
+assertArraysEqual(middle([1, 2]), []);
 
-assertArraysEqual((middle([1,2,3])),[2]);
-assertArraysEqual((middle([1,2,3,4,5])),[3]);
+assertArraysEqual(middle([1, 2, 3]), [2]);
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
 
-assertArraysEqual((middle([1,2,3,4])),[2,3]);
-assertArraysEqual((middle([1,2,3,4,5,6])),[3,4]);
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);

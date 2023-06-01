@@ -1,3 +1,5 @@
+//checks if two arrays are equal
+
 //Side Effect function
 const eqArrays = (actual, expected) => {
   // Compare lengths
@@ -17,12 +19,11 @@ const eqArrays = (actual, expected) => {
   return true;
 };
 
-//checks if two arrays are equal
 //Function Implementation
 const assertArraysEqual = (actual, expected) => {
   eqArrays(actual, expected)
-    ? console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`)
-    : console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
+    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
+    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
 //Test
