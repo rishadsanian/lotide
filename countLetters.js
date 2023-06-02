@@ -17,8 +17,6 @@ const countLetters = (sentence) => {
   const output = {};
   //remove spaces
   // sentence = sentence.split(" ").join("");
-  //console.log(sentence);
-  //count increment
   //loop through each letter in sentence
   for (let letter of sentence) {
     //add letter count increment as value
@@ -30,8 +28,6 @@ const countLetters = (sentence) => {
     }
   }
 
-  //return output object
-  //console.log(output);
   return output;
 };
 
@@ -53,5 +49,5 @@ const result1 = countLetters(input, {
 
 assertEqual(result1["l"], 1);
 assertEqual(result1["i"], 2);
-assertEqual(result1["e"], 3);
+assertEqual(result1["n"], 1);
 assertEqual(result1[/\s/], undefined);

@@ -31,26 +31,27 @@ const assertArraysEqual = (actual, expected) => {
 
 //Implement function
 const letterPositions = (sentence) => {
+
   const results = {};
-  // logic to update results here
+
 
   //remove spaces
   sentence = sentence.split(""); //.join("");
 
-  //count increment
-  //loop through each letter in sentence
-  let count = 0;
-  for (let char of sentence) {
-    //add counter
 
-    //add letter count increment as value
-    if (results[char]) {
-      //Checks if key already exists
-      results[char].push(count); //push additional indices
+  //loop through each letter in sentence
+
+  //add position
+  let position = 0;
+  for (let char of sentence) {
+
+    if (results[char]) { //Checks if key already exists
+
+      results[char].push(position); //push additional indices
     } else {
-      results[char] = [count]; //initializes if does not exist with value of 1
+      results[char] = [position]; //initializes if does not exist with value of 1
     }
-    count++;
+    position++;
   }
   //delete " " key
   delete results[" "];

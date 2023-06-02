@@ -1,23 +1,24 @@
-//Test functions
-const assertEqual = (actual, expected) => {
-  actual === expected
-    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
 
 // Implement the function findKey which takes in an object and a callback. It should scan the object and return the first key for which the callback returns a truthy value. If no key is found, then it should return undefined.
 
 //Function Implementation
 const findKey = (obj, callback) => {
-  //scan through all array of keys in object
-  for (let key of Object.keys(obj)) {
-    //if value matches object's key value
-    if (callback(obj[key])) {
-      //return key
+
+  for (let key of Object.keys(obj)) {//for each key in the object
+   
+    if (callback(obj[key])) {//checks for condition on the key
       return key;
     }
   }
   return undefined;
+};
+
+
+//Test functions
+const assertEqual = (actual, expected) => {
+  actual === expected
+    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
+    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 //test cases
 const test1 = findKey(

@@ -1,32 +1,30 @@
 //Compares two arrays and returns truthy or falsy
 
-//TEST functions
-const assertEqual = (actual, expected) => {
-  actual === expected
-    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
-
 // FUNCTION IMPLEMENTATION
 //Compare Arrays
-const eqArrays = (actual, expected) => {
-  // Compare lengths
-  if (actual.length !== expected.length) {
+const eqArrays = (arr1, arr2) => {
+  
+  //check for length
+  if (arr1.length !== arr2.length) {
     return false;
   }
 
-  // Iterate through each index of the array
-  for (let i in actual) {
-    // Compare the indices in arrrays
-    if (actual[i] !== expected[i]) {
+  //check for match false
+  for (let i in arr1) {
+    if (arr1[i] !== arr2[i]) {
       return false;
     }
   }
 
-  // If all elements match, return true
   return true;
 };
 
+//TEST functions
+const assertEqual = (arr1, arr2) => {
+  arr1 === arr2
+    ? console.log(`🟢🟢🟢 Assertion Passed: ${arr1} === ${arr2}`)
+    : console.log(`🔴🔴🔴 Assertion Failed: ${arr1} !== ${arr2}`);
+};
 
 // TEST CODE
 
