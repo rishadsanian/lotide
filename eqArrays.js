@@ -19,22 +19,6 @@ const eqArrays = (arr1, arr2) => {
   return true;
 };
 
-//TEST functions
-const assertEqual = (arr1, arr2) => {
-  arr1 === arr2
-    ? console.log(`🟢🟢🟢 Assertion Passed: ${arr1} === ${arr2}`)
-    : console.log(`🔴🔴🔴 Assertion Failed: ${arr1} !== ${arr2}`);
-};
+module.exports = eqArrays;
 
-// TEST CODE
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
-
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 3]), false);
-assertEqual(eqArrays([1, 2, 3,"!"], [1, 2, 3, 5]), false);
-assertEqual(eqArrays([0], [""]), false);
