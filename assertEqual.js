@@ -7,6 +7,5 @@ const assertEqual = (actual, expected) => {
   );
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp"); //fail
-assertEqual(1, 1); //pass
+
+module.exports = assertEqual;
