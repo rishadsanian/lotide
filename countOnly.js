@@ -5,13 +5,6 @@ only keys which have a truthy value should be counted in the resulting object. A
 The function should report back how many instances of each string were found in the allItems array of strings
 [a,a,b,a] filter {a:true, b:false, f:true} result {a:3} */
 
-//Test Functions
-const assertEqual = (actual, expected) => {
-  actual === expected
-    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
-
 //Initial Function Definition
 //all items - array of strings that we need to look through
 // itemsToCount - an object specifying what to count.
@@ -36,28 +29,29 @@ const countOnly = (allItems, itemsToCount) => {
   return results;
 };
 
-//Test Cases
+module.exports = countOnly;
+// //Test Cases
 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe",
-];
+// const firstNames = [
+//   "Karl",
+//   "Salima",
+//   "Agouhanna",
+//   "Fang",
+//   "Kavith",
+//   "Jason",
+//   "Salima",
+//   "Fang",
+//   "Joe",
+// ];
 
-const result1 = countOnly(firstNames, {
-  Jason: true,
-  Karima: true,
-  Fang: true,
-  Agouhanna: false,
-});
+// const result1 = countOnly(firstNames, {
+//   Jason: true,
+//   Karima: true,
+//   Fang: true,
+//   Agouhanna: false,
+// });
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+// assertEqual(result1["Jason"], 1);
+// assertEqual(result1["Karima"], undefined);
+// assertEqual(result1["Fang"], 2);
+// assertEqual(result1["Agouhanna"], undefined);

@@ -13,42 +13,45 @@ const findKey = (obj, callback) => {
   return undefined;
 };
 
+module.exports = findKey;
 
-//Test functions
-const assertEqual = (actual, expected) => {
-  actual === expected
-    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
-//test cases
-const test1 = findKey(
-  {
-    "Blue Hill": { stars: 1 },
-    Akaleri: { stars: 3 },
-    noma: { stars: 2 },
-    elBulli: { stars: 3 },
-    Ora: { stars: 2 },
-    Akelarre: { stars: 3 },
-  },
-  (x) => x.stars === 2
-);
 
-const result1 = "noma";
 
-assertEqual(test1, result1);
+// //Test functions
+// const assertEqual = (actual, expected) => {
+//   actual === expected
+//     ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
+//     : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
+// };
+// //test cases
+// const test1 = findKey(
+//   {
+//     "Blue Hill": { stars: 1 },
+//     Akaleri: { stars: 3 },
+//     noma: { stars: 2 },
+//     elBulli: { stars: 3 },
+//     Ora: { stars: 2 },
+//     Akelarre: { stars: 3 },
+//   },
+//   (x) => x.stars === 2
+// );
 
-const test2 = findKey(
-  {
-    "Blue Hill": { stars: 1 },
-    Akaleri: { stars: 3 },
-    noma: { stars: 2 },
-    elBulli: { stars: 3 },
-    Ora: { stars: 2 },
-    Akelarre: { stars: 3 },
-  },
-  (x) => x.stars === 1
-);
+// const result1 = "noma";
 
-const result2 = "Blue Hill";
+// assertEqual(test1, result1);
 
-assertEqual(test2, result2);
+// const test2 = findKey(
+//   {
+//     "Blue Hill": { stars: 1 },
+//     Akaleri: { stars: 3 },
+//     noma: { stars: 2 },
+//     elBulli: { stars: 3 },
+//     Ora: { stars: 2 },
+//     Akelarre: { stars: 3 },
+//   },
+//   (x) => x.stars === 1
+// );
+
+// const result2 = "Blue Hill";
+
+// assertEqual(test2, result2);

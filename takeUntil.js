@@ -15,32 +15,9 @@ const takeUntil = (array, callback) => {
   }
 };
 
-//Test functions
+module.exports = takeUntil;
 
-const eqArrays = (actual, expected) => {
-  // Compare lengths
-  if (actual.length !== expected.length) {
-    return false;
-  }
-
-  // Iterate through each index of the array
-  for (let i in actual) {
-    // Compare the indices in arrrays
-    if (actual[i] !== expected[i]) {
-      return false;
-    }
-  }
-
-  // If all elements match, return true
-  return true;
-};
-
-const assertArraysEqual = (actual, expected) => {
-  eqArrays(actual, expected)
-    ? console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
-
+/*
 //Test cases
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, (x) => x < 0);
@@ -67,3 +44,4 @@ console.log(results2);
 // [ 'I\'ve', 'been', 'to', 'Hollywood' ]
 
 assertArraysEqual(results1, [1, 2, 5, 7, 2]);
+ */
