@@ -37,6 +37,7 @@ const letterPositions = (sentence) => {
 
 module.exports = letterPositions;
 
+//console.log(letterPositions("Silly Sally"));
 // //TEST CASES
 // const input = "lighthouse in the house";
 // console.log(letterPositions(input)); //

@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@rishadalam/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Lotide project is a simple and limited clone of lodash and includes various string, objects, numbers and array manipulation functions. It also incldues a few assertation functions",
   "main": "index.js",
   "directories": {
     "test": "test"
