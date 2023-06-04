@@ -1,0 +1,26 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishadsanian/lotide.git"
+  },
+  "author": "Rishad A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishadsanian/lotide/issues"
+  },
+  "homepage": "https://github.com/rishadsanian/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^9.2.2"
+  }
+}

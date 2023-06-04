@@ -3,9 +3,9 @@
 // FUNCTION IMPLEMENTATION
 //Compare Arrays
 const eqArrays = (arr1, arr2) => {
-  
-  //check for length
+
   if (arr1.length !== arr2.length) {
+    //check for length
     return false;
   }
 
@@ -20,5 +20,3 @@ const eqArrays = (arr1, arr2) => {
 };
 
 module.exports = eqArrays;
-
-
